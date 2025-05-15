@@ -1,0 +1,39 @@
+{% extends 'my_app/main.html' %}
+{% load static %}
+
+{%block title%}Catalog{%endblock%}
+{% block content %}
+
+<div class="row row-cols-4 row-cols-md-3 g-4 mx-auto ">
+	{% for product in products %}
+	<div class="">
+		<div class="card h-100 products_style">
+			<div class="card-img-wrap">
+				<img src="{{product.img.url}}" alt="image" class="card-img-top">
+			</div>
+			<div class="card-body">
+				<h5>{{ product.name}} {{product.brand }}</h5>
+				<!--<h5>цена:{{ product.year }}</h5>
+				<h5>цена:{{ product.mileage }}</h5>
+				<h5>цена:{{ product.owners }}</h5>
+				<h5> g: {{ product.speed }}</h5> -->
+				<h5>цена:{{ product.price }}</h3>
+				<a class='btn btn-outline-dark' href="{% url 'product' product.id %}">Получить предложение</a>
+			</div>
+		</div>
+	</div>
+	{% endfor %}
+</div>
+<style>
+	.card-img-wrap {
+		height: 255px;
+		overflow: hidden;
+		border-radius: 1.3em;
+
+	}
+
+	.products_style {
+		border-radius: 1.3em;
+	}
+</style>
+{% endblock %}

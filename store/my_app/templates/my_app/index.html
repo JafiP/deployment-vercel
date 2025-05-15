@@ -1,0 +1,31 @@
+{% extends 'my_app/main.html' %}
+{% load static %}
+{%block title%}Category{%endblock%}
+{% block content %}
+
+<div class="row row-cols-4 row-cols-md-3 g-4 mx-auto ">
+	{% for category in categories %}
+	<div class="">
+		<div class="card products_style">
+			<div class="card-img-wrap">
+			</div>
+			<div class="card-body">
+				<h1>{{ category.name}}</h1>
+				<a class='btn btn-outline-dark' href="{%url 'products_id' category.id%}">Перейти</a>
+			</div>
+		</div>
+	</div>
+	{% endfor %}
+</div>
+<style>
+	.card-img-wrap {
+		overflow: hidden;
+		border-radius: 1.3em;
+		padding: 1em;
+	}
+
+	.products_style {
+		border-radius: 1.3em;
+	}
+</style>
+{% endblock %}

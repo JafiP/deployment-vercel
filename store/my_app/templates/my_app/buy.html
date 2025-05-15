@@ -1,0 +1,35 @@
+{% extends 'my_app/main.html' %}
+
+{%block title%}Ordering{%endblock%}
+{% block content %}
+
+
+<form action="{% url 'ordering' %}" method="post">
+    {% csrf_token %}
+    <label class="form-label" for="{{ form.почта.id_for_label }}"><b>{{ form.почта.label }}: </label>{{ form.почта }}
+    <div class="form-error">{{ form.почта.errors }} </div>
+    <label class="form-label"
+        for="{{ form.номер_телефона.id_for_label }}">{{form.номер_телефона.label}}:</label>{{form.номер_телефона }}
+    <div class="form-error">{{ form.номер_телефона.errors }} </div>
+    <input type="submit" class=" btn btn-outline-dark" value="Oтправить">
+
+
+
+</form>
+
+
+<style>
+    input {
+        border-radius: 8px;
+        margin: 0.5em;
+    }
+
+    input {
+
+
+        padding: 10px;
+
+
+    }
+</style>
+{% endblock %}

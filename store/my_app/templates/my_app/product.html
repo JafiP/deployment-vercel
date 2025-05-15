@@ -1,0 +1,27 @@
+{% extends 'my_app/main.html' %}
+
+{%block title%}Car{%endblock%}
+{% block content %}
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+			<div class="my-2">
+				<img class="products_style" src="{{product.img.url}}" alt="" width="400" height="250">
+			</div>
+		</div>
+		<div class="col-md-8">
+			<h1>{{ product.name }}</h1>
+			<h5>{{ product.price }} </h5>
+			<p>{{ product.descriptios }}</p>
+			<a href="{% url 'buy' %}" class="btn btn-outline-dark">Оставить заявку</a>
+		</div>
+	</div>
+</div>
+
+<style>
+	.products_style {
+	border-radius: 1.3em;
+	}
+</style>
+{% endblock %}

@@ -1,0 +1,80 @@
+[
+  {
+    "model": "my_app.product",
+    "pk": 1,
+    "fields": {
+      "name": "Rang Rover",
+      "img": "static/image/bmwww.png",
+      "category": 1,
+      "brand": "",
+      "color": "white",
+      "speed": 110,
+      "price": 3000000
+    }
+  },
+  {
+    "model": "my_app.product",
+    "pk": 2,
+    "fields": {
+      "name": "Chevrolet",
+      "img": "static/image/camar.png",
+      "category": 2,
+      "brand": "",
+      "color": "yellow",
+      "speed": 105,
+      "price": 4000000
+    }
+  },
+  {
+    "model": "my_app.product",
+    "pk": 3,
+    "fields": {
+      "name": "Mazda",
+      "img": "static/image/mazda.png",
+      "category": 2,
+      "brand": "",
+      "color": "red",
+      "speed": 120,
+      "price": 900000
+    }
+  },
+  {
+    "model": "my_app.product",
+    "pk": 4,
+    "fields": {
+      "name": "Nissan",
+      "img": "static/image/niss.png",
+      "category": 3,
+      "brand": "",
+      "color": "blue",
+      "speed": 100,
+      "price": 600000
+    }
+  },
+  {
+    "model": "my_app.product",
+    "pk": 5,
+    "fields": {
+      "name": "BMW",
+      "img": "static/image/w.png",
+      "category": 3,
+      "brand": "",
+      "color": "green",
+      "speed": 130,
+      "price": 10000000
+    }
+  },
+  {
+    "model": "my_app.product",
+    "pk": 6,
+    "fields": {
+      "name": "Dodge",
+      "img": "static/image/raam.png",
+      "category": 1,
+      "brand": "",
+      "color": "black",
+      "speed": 100,
+      "price": 13000000
+    }
+  }
+]
